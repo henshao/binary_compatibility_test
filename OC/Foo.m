@@ -1,5 +1,5 @@
 
-#import "foo.h"
+#import "Foo.h"
 
 @implementation Foo
 

@@ -22,3 +22,4 @@ Pods
 *.dSYM
 *.dylib
 main
+*.o
