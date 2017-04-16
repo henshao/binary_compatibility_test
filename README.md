@@ -2,11 +2,13 @@
 
 ### iOS端动态库使用情况
 
-1. 开源库只能通过Podfile做源码引入，源码依赖，编译非常慢。
-2. 可持续构建也需要基于苹果的环境，比如使用Mac Pro/Mac Mini构建。Mac Pro比较昂贵，Mac mini性能不行，构建一次需要花费大量时间。
-3. 大型App为了加快编译速度，可以维护自己的私有仓库，把依赖的库尽量编译成Framework，加快编译速度。
-4. 目前Swift目前基于动态库开发。
-5. 基于动态库构建App，升级一个动态库需要将整个依赖树编译一遍。尤其是一些频繁变动的组件，比如UIKit，视觉组件比较基础，并且经常需要变动。
+1. iOS 8开始支持App使用动态库。
+2. 苹果对提交的App的`__TEXT__`段大小是有限制的，很多巨无霸App容易超出这个限制。iOS9之前每个架构的`__TEXT__`段比较小，iOS9放大到了500MB。详细情况请看：[To submit an app for review](https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/SubmittingTheApp.html)。
+3. 开源库只能通过Podfile做源码引入，源码依赖，编译非常慢。
+4. 可持续构建也需要基于苹果的环境，比如使用Mac Pro/Mac Mini构建。Mac Pro比较昂贵，Mac mini性能不行，构建一次需要花费大量时间。
+5. 大型App为了加快编译速度，可以维护自己的私有仓库，把依赖的库尽量编译成Framework，加快编译速度。
+6. 目前Swift目前基于动态库开发。
+7. 基于动态库构建App，升级一个动态库需要将整个依赖树编译一遍。尤其是一些频繁变动的组件，比如UIKit，视觉组件比较基础，并且经常需要变动。
 
 ### 测试环境
 
