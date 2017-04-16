@@ -4,6 +4,9 @@ all: libFoo.dylib libBar.dylib
 libFoo.dylib: Foo.*
 	swiftc -g -emit-module -emit-library Foo.swift
 
+foo : Foo.*
+	swiftc -g -emit-module -emit-library Foo.swift
+
 libBar.dylib: Bar.*
 	swiftc -g -emit-module -emit-library Bar.swift -I. -L. -lFoo
 

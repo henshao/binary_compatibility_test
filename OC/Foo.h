@@ -4,7 +4,7 @@
 @interface Foo : NSObject
 {
     @public
-//    NSString* member0;
+    NSString* member0;
     NSString* member1;
     NSString* member2;
 }

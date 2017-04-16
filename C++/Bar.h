@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Bar : Foo {
+class Bar : public Foo {
     public:
 
     string *member3;
