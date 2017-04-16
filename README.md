@@ -16,6 +16,13 @@ C++、OC和Swift分别实现Foo这个基类，然后再实现Bar这个子类，m
 
 代码地址：[ABI_test](https://github.com/henshao/ABI_test)。
 
+LLDB一点有用的调试技巧。更多的调试功能，请参看：[The LLDB Debugger](https://lldb.llvm.org/lldb-gdb.html)。
+```
+br set -f main.cpp -l 17 //在main.m:17打断点
+br set -f main.cpp -n main //在main.m:main函数打断点
+x/10a *(void**)bar //将bar对象的虚函数打印出来
+```
+
 ### 测试结果
 
 0. C++会出现错位，但是没有崩溃。二进制也是比较脆弱的。
@@ -43,7 +50,7 @@ error: missing required module 'Foo'
 0. OC使用方法和属性都使用消息派发，增加和删除方法，移动方法的顺序，都不会导致问题；另外增对成员变量的改变做了支持，所以二进制兼容完美。
 0. 作为一种崭新的语言，Swift的二进制兼容最差，匪夷所思啊。
 
-另外大家讨论的时候也提到C++虚函数改变顺序会不会出问题。针对这个问题我验证了一下，确认C++虚函数表里面函数的顺序完全取决于函数声明的顺序。
+另外大家讨论的时候也提到C++虚函数改变顺序会不会出问题。针对这个问题我验证了一下，确认C++虚函数表里面函数的顺序完全取决于函数在头文件中声明的顺序。
 
 比如Foo有func1和func2两个虚函数，调换func1和func2的顺序，不重新编译main。在main里面调用func2，实际上会调用到func1。
 
