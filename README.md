@@ -109,3 +109,8 @@ Process 11179 stopped
 0. [Non Fragile ivars](http://www.jianshu.com/p/3b219ab86b09)
 0. [Objc源码](https://github.com/opensource-apple/objc4)
 0. [Swift库二进制接口(ABI)兼容性研究](http://www.jianshu.com/p/5860f5542f21)
+
+### 最后的最后
+
+Golang也是一门赞新的语言，我非常好奇它对二进制兼容这块是怎么考虑的，所以欢迎广大有为青年补充一个Golang版本。
+
