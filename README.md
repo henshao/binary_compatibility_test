@@ -14,7 +14,7 @@
 
 C++、Java、OC和Swift分别实现Foo这个基类，然后再实现Bar这个子类，main则使用Bar类打印成员变量的信息。给Foo类添加成员变量，重新编译Foo，Bar和main不变，然后观察执行结果。
 
-代码地址：[binary_compatibility](https://github.com/henshao/binary_compatibility)。
+代码地址：[binary_compatibility_test](https://github.com/henshao/binary_compatibility_test)。
 
 LLDB一点有用的调试技巧。更多的调试功能，请参看：[The LLDB Debugger](https://lldb.llvm.org/lldb-gdb.html)。
 ```
@@ -78,7 +78,7 @@ Current executable set to 'main' (x86_64).
 (lldb) br set -f main.cpp -l 17
 Breakpoint 1: where = main`main + 65 at main.cpp:17, address = 0x0000000100000f11
 (lldb) run
-Process 11179 launched: '/Users/henshao/binary_compatibility/C++/main' (x86_64)
+Process 11179 launched: '/Users/henshao/binary_compatibility_test/C++/main' (x86_64)
 Process 11179 stopped
 * thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
     frame #0: 0x0000000100000f11 main`main at main.cpp:17
