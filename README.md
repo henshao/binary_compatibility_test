@@ -12,7 +12,7 @@
 
 ### 测试环境
 
-C++、Java、OC和Swift分别实现Foo这个基类，然后再实现Bar这个子类，main则使用Bar类打印成员变量的信息。给Foo类添加成员变量，重新编译Foo，Bar和main不变，然后观察执行结果。
+C++、Java、OC和Swift分别实现Foo这个基类，然后再实现Bar这个子类，main则使用Bar类打印成员变量的信息。给Foo类添加成员变量：`member0`，重新编译Foo（make foo && ./main），Bar和main不变，然后观察执行结果。
 
 代码地址：[binary_compatibility_test](https://github.com/henshao/binary_compatibility_test)。
 
